@@ -17,4 +17,13 @@ updates:
     schedule:
       day: "saturday"
       interval: "weekly"
+  - commit-message:
+      prefix: "chore: "
+    directory: "/"
+    package-ecosystem: "npm"
+    pull-request-branch-name:
+      separator: "-"
+    schedule:
+      day: "friday"
+      interval: "weekly"
 version: 2
