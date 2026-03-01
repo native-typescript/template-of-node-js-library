@@ -23,6 +23,7 @@
 		"loader-of-typescript-for-node-js": "2.0.0",
 		"prettier": "3.8.1",
 		"release-it": "19.2.4",
+		"stringifying-zod-issues": "1.0.0",
 		"typescript": "5.9.3",
 		"typescript-eslint": "8.57.2",
 		"zod": "4.3.6"
@@ -51,8 +52,5 @@
 		"typescript:check": "tsc"
 	},
 	"type": "module",
-	"version": "0.0.0",
-	"dependencies": {
-		"stringifying-zod-issues": "1.0.0"
-	}
+	"version": "0.0.0"
 }
