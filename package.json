@@ -50,5 +50,8 @@
 		"typescript:check": "tsc"
 	},
 	"type": "module",
-	"version": "0.0.0"
+	"version": "0.0.0",
+	"dependencies": {
+		"stringifying-zod-issues": "1.0.0"
+	}
 }
