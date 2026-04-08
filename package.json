@@ -7,6 +7,7 @@
 	"bugs": {
 		"url": "https://github.com/native-typescript/template-of-node-js-library/issues"
 	},
+	"description": "A template of a Node.js library.",
 	"devDependencies": {
 		"@commitlint/cli": "20.5.0",
 		"@commitlint/types": "20.5.0",
@@ -33,6 +34,7 @@
 		"node": ">=24.14.0",
 		"npm": ">=11.9.0"
 	},
+	"exports": "./index.ts",
 	"homepage": "https://github.com/native-typescript/template-of-node-js-library#readme",
 	"name": "@native-typescript/template-of-node-js-library",
 	"repository": {
