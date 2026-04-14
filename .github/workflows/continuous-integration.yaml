@@ -97,4 +97,4 @@ jobs:
 name: "Continuous integration"
 on:
   pull_request:
-  push:
+    types: ["edited", "opened", "reopened", "synchronize"]
