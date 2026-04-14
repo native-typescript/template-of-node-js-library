@@ -2,21 +2,30 @@ env:
   NODE_JS__VERSION: "24.14.0"
 jobs:
   commitlint_check:
+    if: "${{github.event_name == 'pull_request'}}"
     name: "commitlint check"
     runs-on: "ubuntu-latest"
     steps:
       - name: "Checkout the repository"
         uses: "actions/checkout@v6.0.2"
+        with:
+          fetch-depth: 0
       - name: "Setup Node.js"
         uses: "actions/setup-node@v6.3.0"
         with:
           cache: "npm"
           node-version: "${{env.NODE_JS__VERSION}}"
       - name: "Install the dependencies"
-        run: "npm ci"
+        run: |
+          npm ci
+      - name: "Configure Git"
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
       - name: "Run the commitlint check"
         run: |
-          npm run commitlint:check:range -- --from=${{github.event.before}} --to=${{github.sha}}
+          git commit --allow-empty --message "${{github.event.pull_request.title}}"
+          npm run commitlint:check:last
   eslint_check:
     name: "ESLint check"
     runs-on: "ubuntu-latest"
@@ -29,7 +38,8 @@ jobs:
           cache: "npm"
           node-version: "${{env.NODE_JS__VERSION}}"
       - name: "Install the dependencies"
-        run: "npm ci"
+        run: |
+          npm ci
       - name: "Run the ESLint check"
         run: |
           npm run eslint:check
@@ -45,7 +55,8 @@ jobs:
           cache: "npm"
           node-version: "${{env.NODE_JS__VERSION}}"
       - name: "Install the dependencies"
-        run: "npm ci"
+        run: |
+          npm ci
       - name: "Run the Prettier check"
         run: |
           npm run prettier:check
@@ -61,7 +72,8 @@ jobs:
           cache: "npm"
           node-version: "${{env.NODEJS_VERSION}}"
       - name: "Install the dependencies"
-        run: "npm ci"
+        run: |
+          npm ci
       - name: "Run the test check"
         run: |
           npm run test:check
@@ -77,7 +89,8 @@ jobs:
           cache: "npm"
           node-version: "${{env.NODE_JS__VERSION}}"
       - name: "Install the dependencies"
-        run: "npm ci"
+        run: |
+          npm ci
       - name: "Run the TypeScript check"
         run: |
           npm run typescript:check
