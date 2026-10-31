@@ -15,7 +15,7 @@
 		"@native-typescript/stringifying-zod-issues": "7.0.0",
 		"@release-it/conventional-changelog": "12.0.2",
 		"@stylistic/eslint-plugin": "5.10.0",
-		"@types/node": "25.9.1",
+		"@types/node": "26.6.5",
 		"@typescript-eslint/parser": "8.67.0",
 		"eslint": "10.4.0",
 		"eslint-plugin-import-x": "4.16.2",
