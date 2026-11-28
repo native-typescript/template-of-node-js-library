@@ -20,7 +20,7 @@
 		"@typescript-eslint/parser": "8.72.2",
 		"arktype": "2.2.9",
 		"eslint": "10.4.0",
-		"eslint-plugin-import-x": "4.16.2",
+		"eslint-plugin-import-x": "4.18.1",
 		"eslint-plugin-perfectionist": "5.9.0",
 		"eslint-plugin-unused-imports": "4.4.1",
 		"expect": "30.5.1",
