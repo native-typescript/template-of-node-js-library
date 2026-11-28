@@ -15,7 +15,7 @@
 		"@native-typescript/stringifying-arktype-errors": "4.0.0",
 		"@release-it/conventional-changelog": "12.0.2",
 		"@stylistic/eslint-plugin": "5.10.0",
-		"@types/node": "25.9.1",
+		"@types/node": "26.6.7",
 		"@typescript-eslint/eslint-plugin": "8.72.2",
 		"@typescript-eslint/parser": "8.72.2",
 		"arktype": "2.2.9",
